@@ -2,7 +2,6 @@ package t2_array;
 
 public class Test1 {
 	public static void main(String[] args) {
-		int atom;
 		
 //		int mbc1 = 0;
 //		int mbc2 = 0;
