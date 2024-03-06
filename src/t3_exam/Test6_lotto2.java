@@ -7,9 +7,15 @@ public class Test6_lotto2 {
 		
 		//6개의 숫자를 임의로 뽑아서 배열에 저장(중복 배제)
 		for(int i=0; i<lotto.length; i++) {
-			int su = (int)(Math.random()*45) + 1;
-			lotto[i] = su;
+			int num = (int)(Math.random()*45) + 1;
+			lotto[i] = num;
+			for(int j = 0; j < i; j++) {
+				if (lotto[i] == lotto[j]) { //받은 숫자와 이전에 받은 숫자 모두 비교
+					i--;
+					break;
+				}
 			}
+		}
 		
 		//6개의 로또 번호를 정렬해서 출력
 		int temp = 0;
